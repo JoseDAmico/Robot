@@ -1,0 +1,320 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>572,4324</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,4219" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable[]" Name="variable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ucas:Logon Window="{x:Null}" ConnectionName="DSF- Desarrollo" DelayBetweenRetries="5000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="484,138" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
+    <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="110" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="Login_2" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="Chepolinx7$" Timeout="5000" Username="UOF_JDAMICO">
+      <ucas:Login.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af4d3c3e-9090-42a8-a563-4a28e83856ca" InformativeScreenshot="aa5ab15fc3ad3a98830c3347b63329f0" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:Login.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ucas:Login>
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="484,160" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="mm01">
+      <ucas:CallTransaction.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ede1533-d766-4b22-a238-51fc2efbeaf6" InformativeScreenshot="51e60a93c2f96772240104e9a1bf4581" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:CallTransaction.Target>
+    </ucas:CallTransaction>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Crear material (Acceso)" sap:VirtualizedContainerService.HintSize="484,3638" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,3347" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir Codigo de Material" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Text="UIP 003 Test" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="144, 181, 286, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Número'" FullSelectorArgument="&lt;sap id='usr/ctxtRMMG1-MATNR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRMMG1-MATNR' /&gt;" Guid="beee0e74-962a-4514-8f5a-3d4df0b2abdf" InformativeScreenshot="b282f40dead9f579fe95210c6cc6b27f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material (Acceso)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Seleccionar elemento &quot;Ramo'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Ingeniería industrial" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="6">
+                  <x:String>Comercio</x:String>
+                  <x:String>Farmacéutico</x:String>
+                  <x:String>Ingeniería industrial</x:String>
+                  <x:String>Ingeniería mecánica</x:String>
+                  <x:String>Químico</x:String>
+                  <x:String xml:space="preserve"> </x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="144, 203, 286, 20" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'ComboBox Ramo'" FullSelectorArgument="&lt;sap id='usr/cmbRMMG1-MBRSH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cmbRMMG1-MBRSH' /&gt;" Guid="73857a5c-a227-4935-b0c3-ca542c78aeed" InformativeScreenshot="697798362bdd9c51a697fce621b48c82.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material (Acceso)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Seleccionar elemento 'Tipo'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Materias primas" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="56">
+                  <x:String>Accesorios de venta</x:String>
+                  <x:String>Bebidas</x:String>
+                  <x:String>CH gestión de contratos</x:String>
+                  <x:String>Clase Form Fit Function</x:String>
+                  <x:String>Comida (excl.perecederos)</x:String>
+                  <x:String>Componente mantenimiento</x:String>
+                  <x:String>Confección (de temporada)</x:String>
+                  <x:String>Config.vehículo</x:String>
+                  <x:String>Contenedor kanban</x:String>
+                  <x:String>Cupón</x:String>
+                  <x:String>Embalaje</x:String>
+                  <x:String>Embalaje en préstamo</x:String>
+                  <x:String>Envases</x:String>
+                  <x:String>Envases (No usar)</x:String>
+                  <x:String>Envases: Gestión mcía.</x:String>
+                  <x:String>ETM Material de consumo</x:String>
+                  <x:String>ETM Material utilizable</x:String>
+                  <x:String>Grupo de productos</x:String>
+                  <x:String>Intramaterial</x:String>
+                  <x:String>Material completo</x:String>
+                  <x:String>Material de proceso</x:String>
+                  <x:String>Material de valor</x:String>
+                  <x:String>Material general</x:String>
+                  <x:String>Material intercambiable</x:String>
+                  <x:String>Material no stock</x:String>
+                  <x:String>Material no valorado</x:String>
+                  <x:String>Material publicitario</x:String>
+                  <x:String>Materiales configurables</x:String>
+                  <x:String>Materiales para pipeline</x:String>
+                  <x:String>Materias aux./combustible</x:String>
+                  <x:String>Materias primas</x:String>
+                  <x:String>Mercadería (planificada)</x:String>
+                  <x:String>Mercaderías</x:String>
+                  <x:String>No comida</x:String>
+                  <x:String>Objeto planif.material</x:String>
+                  <x:String>Paquete de equipamiento</x:String>
+                  <x:String>Pieza del fabricante</x:String>
+                  <x:String>Piezas de recambio</x:String>
+                  <x:String>Prod.comp.suscripción</x:String>
+                  <x:String>Prod.socio suscripción</x:String>
+                  <x:String>Producto competencia</x:String>
+                  <x:String>Producto competencia</x:String>
+                  <x:String>Producto de servicio</x:String>
+                  <x:String>Producto de suscripción</x:String>
+                  <x:String>Producto en paquete</x:String>
+                  <x:String>Producto semielaborado</x:String>
+                  <x:String>Producto terminado</x:String>
+                  <x:String>Productos perecederos</x:String>
+                  <x:String>Recursos / herr.prod.</x:String>
+                  <x:String>Residuo (No usar)</x:String>
+                  <x:String>Residuos</x:String>
+                  <x:String>Servicio</x:String>
+                  <x:String>Software no valorado</x:String>
+                  <x:String>Suministros Diversos</x:String>
+                  <x:String>Unidad compatible</x:String>
+                  <x:String xml:space="preserve"> </x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="144, 225, 286, 20" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'ComboBox Tipo'" FullSelectorArgument="&lt;sap id='usr/cmbRMMG1-MTART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cmbRMMG1-MTART' /&gt;" Guid="95135c5b-bc3d-4e19-8a8a-734e76cb6562" InformativeScreenshot="f0af1a6f79faa2398cd50b74682280a0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material (Acceso)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Button Continuar (Intro)'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="30, 50, 22, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Button Continuar (Intro)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="eea84dbe-a48b-4024-a890-e1fa1d3b8f68" InformativeScreenshot="89e936f08a345a220e358bbeef7767a2.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material (Acceso)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheck Action="Check" DisplayName="Marcar/Desmarcar 'Checkbox'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="4, 55, 18, 20" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' /&gt;" Guid="ae466cac-740c-4f9d-bec7-12f6b143078a" InformativeScreenshot="85c6507492f0028e7440c7720e421426.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Selección de vistas' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Marcar/Desmarcar 'Checkbox'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="4, 76, 18, 20" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' tableRow='1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' /&gt;" Guid="80ba8581-2218-4310-8712-9dcbb1d348fc" InformativeScreenshot="1c492ab5886e7cecf4c79bc01d600607.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Selección de vistas' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Marcar/Desmarcar 'Checkbox'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="4, 223, 18, 20" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' tableRow='8' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' /&gt;" Guid="0530d845-3307-4478-8d52-2e556a277919" InformativeScreenshot="d05f3d0e1d27d163aaf6c52fda048422.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Selección de vistas' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Marcar/Desmarcar 'Checkbox'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="4, 244, 18, 20" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' tableRow='9' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' /&gt;" Guid="bd1158e8-2135-4111-b359-ef080d069d14" InformativeScreenshot="c72dfa032053678b6ff9cb41595de3da.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Selección de vistas' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Marcar/Desmarcar 'Checkbox'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NCheck_5" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="4, 97, 18, 20" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' tableRow='2' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' /&gt;" Guid="41b160cf-10cc-4d92-8692-a875721a41c9" InformativeScreenshot="a3876e1fbed9e7c8df553fae4562d282.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Selección de vistas' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Button Continuar (Intro)'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 510, 20, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Button Continuar (Intro)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="7588b94a-97be-40e6-942f-222f0b16eefa" InformativeScreenshot="b22d582f94911500d952c282ebad1dbd.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Selección de vistas' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'CTextField Centro'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Text="CLM3" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="123, 55, 48, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Centro'" FullSelectorArgument="&lt;sap id='usr/ctxtRMMG1-WERKS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRMMG1-WERKS' /&gt;" Guid="d43511fa-6bd6-4388-b218-d5de2b6b527a" InformativeScreenshot="b7e3d894b07a742eaec5b8a6cd5a0a23.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Niveles de organización' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'CTextField Organización'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Text="0001" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="123, 77, 34, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Organización'" FullSelectorArgument="&lt;sap id='usr/ctxtRMMG1-VKORG' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRMMG1-VKORG' /&gt;" Guid="a651319e-af2d-44cb-bb99-6fc7ecec787a" InformativeScreenshot="0ac4315a0cf28fe770fc8f9ae1efcd57.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Niveles de organización' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'TextField Texto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Text="Material de prueba uip" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="109, 225, 286, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TextField Texto'" FullSelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB1:SAPLMGD1:1002/txtMAKT-MAKTX' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB1:SAPLMGD1:1002/txtMAKT-MAKTX' /&gt;" Guid="8dafcfaa-2b98-4387-889d-e6330e78977b" InformativeScreenshot="fdc70e44d2375ff227ea128a8540eccb.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material UIP 002 TEST (Materias primas)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'al'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Text="2" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="186, 291, 41, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'al'" FullSelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB2:SAPLMGD1:2001/ctxtMARA-MEINS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB2:SAPLMGD1:2001/ctxtMARA-MEINS' /&gt;" Guid="cd4c6bfe-eceb-4d13-8b8c-ff7e6112e1c5" InformativeScreenshot="2d7548aa332d47a35302b96ad83694d1.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material UIP 002 TEST (Materias primas)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Button Guardar (Ctrl+S)'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c35d7526-ffb8-4bef-a312-807b7fdf6170" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="230, 50, 22, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Button Guardar (Ctrl+S)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" Guid="c4db806d-5017-457e-b41e-b11b1aa02525" InformativeScreenshot="313c546b1ef2fdef8b67781075a4d000.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material UIP 002 TEST (Materias primas)' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVFhHYxgFo2AUjIJBAxxrVls61ay5T2dcC7Ue7AAnoMB/emHHmjWz7KtXMkGtp68DgJbPsCtfzQi1GgLo5QCg5dMcy1cgLH//5UcECG89fa+5dsnR/5Ti0nkH/ztWrcJuefWaKXYVq1B9/v7Lz//Uwk/ffP6f3LX2v335cmyWT7KqQPI5DGAziBwMsjy+ddl/m6IFQMtWo1s+wbZ4CablIIDNMFLxk9ef/se1LMVuec2aPrMStGBHBtgMJAWDLI8FWV6M1fIeqDW4AdCQxSB89f7LfWsPXfm/9uBlknBsCzDYsVlevboLagVxwKZovotd6ZL/diWLScL25cuwWL6mA2os8QBoCFXKAWCwt0GNJA1QqSBqhhpHOqDUAUCfN0KNIg8AHaAJNGg+mTgXaswoGAWjYBSQCBgYAMLf0dVJBbU9AAAAAElFTkSuQmCC" InformativeScreenshot="6adf12c36090068157a08758ccddb851.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear material (Acceso)' /&gt;" Title="Crear material (Acceso)" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
